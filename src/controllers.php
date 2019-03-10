@@ -11,6 +11,12 @@ $app->get('/new', function () use ($app) {
     return $app['twig']->render('new.html.twig', []);
 })->bind('new');
 
+$app->get('/comments/{id}', function ($id) use ($app) {
+    return $app['twig']->render('comments.html.twig', [
+        'storyId' => $id
+    ]);
+})->bind('comments');
+
 $app->error(function (\Exception $e, Request $request, $code) use ($app) {
     if ($app['debug']) {
         return;

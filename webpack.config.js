@@ -9,6 +9,7 @@ Encore
     .addEntry('app', './assets/js/App.js')
     .addEntry('top', './assets/js/TopStories.js')
     .addEntry('new', './assets/js/NewStories.js')
+    .addEntry('comments', './assets/js/Comments.js')
 
     .enableSassLoader()
 
