@@ -1,0 +1,7 @@
+/vendor/
+/yarn-error.log
+/node_modules/
+/var/logs/
+/var/cache/
+/.idea/
+/web/build/
