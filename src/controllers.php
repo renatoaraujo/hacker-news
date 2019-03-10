@@ -6,6 +6,7 @@ use Symfony\Component\HttpFoundation\Response;
 $app->get('/', function () use ($app) {
     return $app['twig']->render('top.html.twig', []);
 })->bind('top');
+
 $app->get('/new', function () use ($app) {
     return $app['twig']->render('new.html.twig', []);
 })->bind('new');

@@ -12,7 +12,7 @@ Encore
 
     .enableReactPreset()
 
-    .enableSingleRuntimeChunk()
+    .disableSingleRuntimeChunk()
 
     .cleanupOutputBeforeBuild()
 

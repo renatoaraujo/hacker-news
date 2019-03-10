@@ -1,21 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Hacker News</title>
-        <meta name="referrer" content="origin"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="shortcut icon" href="{{ asset('build/img/favicon.ico') }}">
-        {% block stylesheets %}
-            <link rel="stylesheet" href="{{ asset('build/app.css') }}">
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}
-            <div id="root"></div>
-        {% endblock %}
-        {% block javascripts %}
-            <script src="{{ asset('build/runtime.js') }}"></script>
-            <script src="{{ asset('build/app.js') }}"></script>
-        {% endblock %}
-    </body>
+<head>
+    <title>Hacker News</title>
+    <meta name="referrer" content="origin"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="shortcut icon" href="{{ asset('build/img/favicon.ico') }}">
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('build/app.css') }}">
+    {% endblock %}
+</head>
+<body>
+{% block header %}
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="{{ path('top') }}">
+                    <img src="{{ asset('build/img/favicon.ico') }}" alt="">
+                    Hacker
+                    News
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('top') }}">Top</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('new') }}">New</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+{% endblock %}
+
+{% block body %}
+    <div id="root"></div>
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('build/app.js') }}"></script>
+{% endblock %}
+</body>
 </html>
