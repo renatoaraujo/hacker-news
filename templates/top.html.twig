@@ -3,3 +3,8 @@
 {% block title %}
     {{ parent() }} | Top Stories
 {% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('build/top.js') }}"></script>
+{% endblock %}

@@ -6,7 +6,9 @@ Encore
     .setOutputPath('web/build/')
     .setPublicPath('/build')
 
-    .addEntry('app', './assets/js/app.js')
+    .addEntry('app', './assets/js/App.js')
+    .addEntry('top', './assets/js/TopStories.js')
+    .addEntry('new', './assets/js/NewStories.js')
 
     .enableSassLoader()
 

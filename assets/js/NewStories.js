@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Item from './Components/Item';
 
-class TopStories extends React.Component {
+class NewStories extends React.Component {
 
     constructor() {
         super();
@@ -15,7 +15,7 @@ class TopStories extends React.Component {
     }
 
     loadTopStories() {
-        fetch('https://hacker-news.firebaseio.com/v0/topstories.json')
+        fetch('https://hacker-news.firebaseio.com/v0/newstories.json')
             .then(response => response.json())
             .then(itemsKeys => {
                 this.setState({
@@ -82,4 +82,4 @@ class TopStories extends React.Component {
     }
 }
 
-ReactDOM.render(<TopStories/>, document.getElementById('root'));
+ReactDOM.render(<NewStories/>, document.getElementById('root'));

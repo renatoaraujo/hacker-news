@@ -10,6 +10,26 @@ body {
   background-color: #ececec;
 }
 
-a.navbar-brand > img {
-  border: 1px solid white; width:25px;
+.cards {
+  padding: 30px 0;
+}
+
+.item-subtitle {
+  color: $gray-500;
+}
+
+span.index-rank {
+  padding: 0 10px 0 0;
+}
+
+.card-body {
+  padding: 0.75rem;
+}
+
+.card-body > p {
+  margin-bottom: 0.3rem !important;
+}
+
+.flat {
+  border-radius: unset !important;
 }

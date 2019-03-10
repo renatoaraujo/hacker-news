@@ -3,3 +3,8 @@
 {% block title %}
     {{ parent() }} | New Stories
 {% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('build/new.js') }}"></script>
+{% endblock %}
