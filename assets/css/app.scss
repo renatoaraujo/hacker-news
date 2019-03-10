@@ -3,6 +3,8 @@ $orange: #FF6600 !default;
 @import "~bootswatch/dist/united/variables";
 @import "~bootstrap/scss/bootstrap";
 @import "~bootswatch/dist/united/bootswatch";
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/brands';
 
 body {
   background-color: #ececec;

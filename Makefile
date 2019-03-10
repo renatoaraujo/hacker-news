@@ -23,4 +23,9 @@ stats:
 
 .PHONY: compile-dev
 compile-dev:
+	docker-compose exec app yarn install
 	docker-compose exec app yarn encore dev
+
+.PHONY: compile-watch
+compile-watch:
+	docker-compose exec app yarn encore dev --watch
