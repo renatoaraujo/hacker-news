@@ -1,4 +1,4 @@
-.PHONY: setup
+.PHONY: setup-dev
 setup: build up vendor compile-dev stats
 
 .PHONY: build

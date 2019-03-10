@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Item from './Components/Item';
 import Comment from "./Components/Comment";
 
 class Comments extends React.Component {

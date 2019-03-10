@@ -8,11 +8,8 @@ services:
       - "9000"
     volumes:
       - .:/var/www/html
-    networks:
-      app:
-        ipv4_address: 172.28.1.1
-        aliases:
-          - app
+    environment:
+      - APP_ENV=dev
 
   nginx:
     image: nginx:alpine
@@ -26,15 +23,3 @@ services:
       - app
     depends_on:
       - app
-    networks:
-      app:
-        ipv4_address: 172.28.1.2
-        aliases:
-          - nginx
-
-networks:
-  app:
-    ipam:
-      driver: default
-      config:
-        - subnet: 172.28.0.0/16
