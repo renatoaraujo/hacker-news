@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Hacker News</title>
+    <title>{% block title %}Hacker News{% endblock %}</title>
     <meta name="referrer" content="origin"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="shortcut icon" href="{{ asset('build/img/favicon.ico') }}">
@@ -39,9 +39,23 @@
     </header>
 {% endblock %}
 
-{% block body %}
+{% block root %}
     <div id="root"></div>
 {% endblock %}
+
+{% block footer %}
+    <footer class="footer">
+        <div class="container">
+            <p class="text-center">
+                <small>
+                    Developed by <a href="https://github.com/renatoaraujo">Renato Araujo</a> using <a
+                            href="https://news.ycombinator.com/">Hacker News API</a>
+                </small>
+            </p>
+        </div>
+    </footer>
+{% endblock %}
+
 {% block javascripts %}
     <script src="{{ asset('build/app.js') }}"></script>
 {% endblock %}
