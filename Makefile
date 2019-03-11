@@ -1,5 +1,5 @@
 .PHONY: setup-dev
-setup: build up vendor compile-dev stats
+setup-dev: build up vendor compile-dev stats
 
 .PHONY: build
 build:
