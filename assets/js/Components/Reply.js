@@ -1,7 +1,7 @@
 import React from 'react';
 import DOMpurify from 'dompurify';
+import moment from 'moment';
 
-const moment = require('moment');
 const sanitizer = DOMpurify.sanitize;
 
 class Reply extends React.Component {

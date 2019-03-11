@@ -1,8 +1,7 @@
 import React from 'react';
 import DOMpurify from 'dompurify';
 import Reply from './Reply';
-
-const moment = require('moment');
+import moment from 'moment';
 const sanitizer = DOMpurify.sanitize;
 
 class Comment extends React.Component {

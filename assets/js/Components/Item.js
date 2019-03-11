@@ -1,8 +1,7 @@
 import React from 'react';
-
-const extractDomain = require('extract-domain');
-const moment = require('moment');
-const pluralize = require('pluralize');
+import extractDomain from 'extract-domain';
+import moment from 'moment';
+import pluralize from 'pluralize';
 
 const Item = ({id, index, title, url, score, time, descendants, by}) => (
     <div key={id} className="card flat">
