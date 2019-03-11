@@ -11,14 +11,13 @@ class Comment extends React.Component {
 
     render() {
         return (
-            <div className="comment row">
+            <div className="comment">
                 <div className="comment-content">
                     <h6 className="small comment-meta">
                         <a href="#">{this.props.comment.by}</a> about {moment.unix(this.props.comment.time).fromNow()}
                     </h6>
                     <div className="comment-body"
                          dangerouslySetInnerHTML={{__html: sanitizer(this.props.comment.text)}}/>
-                    <hr/>
                 </div>
                 {undefined !== this.props.comment.kids && (<Reply replies={this.props.comment.kids}/>)}
             </div>

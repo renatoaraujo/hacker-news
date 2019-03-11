@@ -60,7 +60,7 @@ class Comments extends React.Component {
                         </a>
                     </h5>
                 </div>
-                <div className="row">
+                <div className="container">
                     <div className="comments" id="comments">
                         {this.state.comments.map(
                             (comment) => (

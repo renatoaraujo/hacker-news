@@ -32,17 +32,16 @@ class Reply extends React.Component {
 
     render() {
         return (
-            <div className="comment-reply col-md-12 offset-md-1 col-sm-10 offset-sm-2">
+            <div className="comment-reply col-md-12 offset-md-1 col-sm-10 offset-sm-2 col-bg-12">
                 {this.state.replies.map(
                     (reply) => (
-                        <div key={reply.id} className="row">
-                            <div className="comment-content col-md-11 col-sm-10 col-12">
+                        <div key={reply.id} className="container-fluid">
+                            <div className="comment-content col-md-11 col-sm-10 col-bg-12">
                                 <h6 className="small comment-meta">
                                     <a href="#">{reply.by}</a> about {moment.unix(reply.time).fromNow()}
                                 </h6>
                                 <div className="comment-body"
                                      dangerouslySetInnerHTML={{__html: sanitizer(reply.text)}}/>
-                                <hr/>
                             </div>
                             {undefined !== reply.kids && (<Reply replies={reply.kids}/>)}
                         </div>
