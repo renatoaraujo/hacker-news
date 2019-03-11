@@ -50,6 +50,15 @@ class Comments extends React.Component {
             <div className="container">
                 <div className="jumbotron jumbotron-fluid">
                     <h3 className="display-4">{this.state.story.title}</h3>
+                    <h5>
+                        <a href={this.state.story.url} target="_blank">
+                            Link to the news
+                        </a>
+                        &nbsp;&middot;&nbsp;
+                        <a href={'https://news.ycombinator.com/item?id=' + this.state.story.id}>
+                            See on ycombinator
+                        </a>
+                    </h5>
                 </div>
                 <div className="row">
                     <div className="comments" id="comments">
